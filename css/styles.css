@@ -1,4 +1,4 @@
-/* Base Element Styles*/
+
 * {
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
@@ -73,8 +73,7 @@ select {
 }
 
 input,
-select,
-textarea {
+select {
     height: 50px;
 }
 
@@ -95,6 +94,7 @@ textarea {
 #contact-info {
     font-size: 1.25em;
     font-weight: bold;
+    margin-bottom: 40px;
 }
 
 #newsletter {
@@ -110,9 +110,7 @@ textarea {
     width: 50%;
 }
 
-label[for="name"] {
-    padding-top: 40px;
-}
+
 
 label {
     padding-top: 5px;
@@ -123,24 +121,18 @@ option {
     color: rgb(52, 57, 63)
 }
 
-#choose {
-    color: red;
-}
-
 input[type="checkbox"] {
     height: 25px;
 }
 
-/* Pseudo-class and Element Styles*/
+
 input::placeholder {
     color: lightslategray;
     text-align: right;
     font-style: italic;
 }
 
-select:invalid {
-    color:lightslategray;
-}
+
 
 
 fieldset > input[type="checkbox"] {
@@ -185,10 +177,13 @@ button {
     color: mintcream;
     font-size: 1.25em;
     background-color:rgb(50, 173, 161);
+    transition-duration: .5s;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: rgb(55, 18, 155);
+    transition-duration: .5s;
 }
 
 footer {
@@ -198,3 +193,76 @@ footer {
     padding-bottom: 10px;
 }
 
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    outline: none;
+}
+
+input:focus, 
+select:focus,
+textarea:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+    border: 2px solid rgb(55, 18, 155);
+}
+
+button:active {
+    color: rgb(28, 223, 2);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-field input,
+.contact-field select {
+    margin-bottom: 20px;
+}
+
+/*Media Queries*/
+
+@media (min-width:768px) {
+    body {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1 {
+        margin-left: -1000px;
+        margin-right: -1000px;
+        margin-bottom: 80px;
+    }
+
+   .contact-field {
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .contact-field label {
+       flex: 20%;
+       padding-top: 10px;
+   }
+
+   .contact-field input,
+   .contact-field select {
+       flex: 80%;
+   }
+
+   label[for="zip-code"] {
+       max-width: 20%;
+   }
+   #zip-code {
+       max-width: 30%;
+       margin-right: auto;
+   }
+
+  
+    
+}
