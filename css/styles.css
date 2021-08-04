@@ -230,14 +230,12 @@ textarea {
 /*Media Queries*/
 
 @media (min-width:768px) {
-    body {
+    .wrap {
         max-width: 800px;
         margin: auto;
     }
 
     h1 {
-        margin-left: -1000px;
-        margin-right: -1000px;
         margin-bottom: 80px;
     }
 
@@ -260,7 +258,7 @@ textarea {
        max-width: 20%;
    }
    #zip-code {
-       max-width: 30%;
+       max-width: 25%;
        margin-right: auto;
    }
 
